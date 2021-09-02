@@ -351,7 +351,9 @@
 									"",
 									"pm.test(\"Response is empty\", function () {",
 									"    pm.expect(jsonData).to.have.lengthOf(0);",
-									"});"
+									"});",
+									"",
+									"postman.setNextRequest(null);"
 								],
 								"type": "text/javascript"
 							}
@@ -467,7 +469,9 @@
 									"pm.test(\"Expected booking is returned\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData).to.eql(pm.variables.get(\"expected\"));",
-									"});"
+									"});",
+									"",
+									"postman.setNextRequest(\"Empty Search\");"
 								],
 								"type": "text/javascript"
 							}
@@ -547,7 +551,7 @@
 									"    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
 									"});",
 									"",
-									"postman.setNextRequest(\"Delete Booking\");"
+									"postman.setNextRequest(\"Existing ID\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1309,7 +1313,7 @@
 							"  });",
 							"});",
 							"",
-							"postman.setNextRequest(null);"
+							""
 						],
 						"type": "text/javascript"
 					}
