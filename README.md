@@ -1,2 +1,6 @@
 # PostmanReportsCI
-🔹 A repo showing GitHub Actions to write test reports using Newman.
+:dart: A project that runs API tests and generate test reports in CI.
+
+:gem: Technologies used and concepts covered:
+* Postman / Newman
+* GitHub Actions
