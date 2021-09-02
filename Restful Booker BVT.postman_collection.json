@@ -545,7 +545,9 @@
 									"    pm.expect(booking.bookingdates.checkin, \"unexpected checkin\").to.eql(pm.variables.get(\"checkin\"));",
 									"    pm.expect(booking.bookingdates.checkout, \"unexpected checkout\").to.eql(pm.variables.get(\"checkout\"));",
 									"    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
-									"});"
+									"});",
+									"",
+									"postman.setNextRequest(\"Delete Booking\");"
 								],
 								"type": "text/javascript"
 							}
@@ -1130,7 +1132,7 @@
 							"    pm.response.to.be.success;",
 							"});",
 							"",
-							"postman.setNextRequest(null);"
+							"postman.setNextRequest(\"Auth\");"
 						],
 						"type": "text/javascript"
 					}
@@ -1165,7 +1167,9 @@
 							"pm.test(\"Response contains token\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData).to.have.property(\"token\");",
-							"});"
+							"});",
+							"",
+							"postman.setNextRequest(\"Valid Create\");"
 						],
 						"type": "text/javascript"
 					}
@@ -1303,7 +1307,9 @@
 							"    pm.expect(err).to.equal(null);",
 							"    pm.expect(res.code).to.eql(404);",
 							"  });",
-							"});"
+							"});",
+							"",
+							"postman.setNextRequest(null);"
 						],
 						"type": "text/javascript"
 					}
