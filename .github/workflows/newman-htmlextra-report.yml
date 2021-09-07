@@ -1,6 +1,6 @@
 # This workflow will help you to produce an HTML extra test results report
 
-name: Newman Report
+name: Newman HTML Report
 on: [push, pull_request]
 
 jobs:
