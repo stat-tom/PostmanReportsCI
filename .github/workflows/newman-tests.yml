@@ -1,6 +1,6 @@
 # This is a basic workflow to get started with GitHub Actions
 
-name: "Newman Tests"
+name: "Newman Basic Report"
 on: [push, pull_request]
 
 jobs:
